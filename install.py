@@ -43,7 +43,7 @@ def check_lang():
         language = choose_lang()
         return language
     except FileNotFoundError:
-        print("D4NG3R.HOST is lacking its needed files. Reinstall D4NG3R.HOST from Github pls")
+        print("GhostTor is lacking its needed files. Reinstall GhostTor from Github pls")
         exit()
 
 
@@ -87,7 +87,7 @@ def uninstall():
             print(language.uninstalled)
             
         else:
-            print(language.torghostng_tip.format('D4NG3R.HOST') + color.END)
+            print(language.torghostng_tip.format('GhostTor') + color.END)
             
         print(language.video_tutorials)
         exit()
@@ -103,7 +103,7 @@ banner()
 
 
 if path.isfile('/usr/bin/torghostng') == True:
-    print(language.already_installed.format('D4NG3R.HOST'))
+    print(language.already_installed.format('GhostTor'))
     uninstall()
 
 if path.isfile('/usr/bin/pacman') == True:
@@ -172,7 +172,7 @@ def install_package(package):
             print(language.installed.format(package))
             
             if path.isfile('/usr/bin/upgradepkg') == True:
-                print(language.torghostng_tip.format('python3 torghostng.py'))
+                print(language.torghostng_tip.format('python3 GhostTor.py'))
                 print(language.video_tutorials)
                 exit()
             
@@ -183,13 +183,13 @@ def install_package(package):
 
 def install_torghostng():
     try:
-        print(language.installing.format('D4NG3R.HOST'))
+        print(language.installing.format('GhostTor'))
         system('cp -r torghostng.py /usr/bin && cp -r torngconf /usr/bin')
         system('mv /usr/bin/torghostng.py /usr/bin/torghostng')
         system('chmod +x /usr/bin/torghostng')
         
         print(icon.success + language.done)
-        print(language.torghostng_tip.format('D4NG3R.HOST') + color.END)
+        print(language.torghostng_tip.format('GhostTor') + color.END)
         
     except KeyboardInterrupt:
         print()
